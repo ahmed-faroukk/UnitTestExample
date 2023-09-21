@@ -10,37 +10,37 @@ class HomeWorkTest{
     //with more than write or left
     @Test
     fun `string without curly brackets on the left`() {
-        val result =  HomeWork.checkBraces("(string")
+        val result =  UnitTestingEx.checkBraces("(string")
         assertThat(result).isFalse()
     }
 
     @Test
     fun `string without curly brackets on the right`() {
-        val result =  HomeWork.checkBraces("string)")
+        val result =  UnitTestingEx.checkBraces("string)")
         assertThat(result).isFalse()
     }
 
     @Test
     fun `string with 2 curly brackets on the right`() {
-        val result =  HomeWork.checkBraces("string))")
+        val result =  UnitTestingEx.checkBraces("string))")
         assertThat(result).isFalse()
     }
 
     @Test
     fun `string with 2 curly brackets on the left`() {
-        val result =  HomeWork.checkBraces("((string")
+        val result =  UnitTestingEx.checkBraces("((string")
         assertThat(result).isFalse()
     }
 
     @Test
     fun `string with curly brackets`() {
-        val result =  HomeWork.checkBraces("(string)")
+        val result =  UnitTestingEx.checkBraces("(string)")
         assertThat(result).isTrue()
     }
 
     @Test
     fun `string without curly brackets`() {
-        val result =  HomeWork.checkBraces("string")
+        val result =  UnitTestingEx.checkBraces("string")
         assertThat(result).isTrue()
     }
 
